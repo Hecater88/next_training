@@ -15,12 +15,12 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 		navigator.clipboard.writeText(post.prompt);
 		setTimeout(() => {
 			setCopied("");
-		}, 3000);
+		}, 2000);
 	};
 	return (
 		<div className="prompt_card">
 			<div className="flex justify-between items-start gap-5">
-				<div className="flex-1 flex justify-start items-cemter gap-3 cursor-pointer">
+				<div className="flex-1 flex justify-start items-cemter gap-3 ">
 					<Image
 						src={post.creator.image}
 						alt="use_image"
@@ -39,7 +39,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 					</div>
 				</div>
 
-				<div className="copy_btn" onClick={() => handleCopy}>
+				<div className="copy_btn cursor-pointer" onClick={handleCopy}>
 					<Image
 						src={
 							copied === post.prompt
@@ -64,12 +64,12 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 					<p
 						className="font-inter text-sm green_gradient cursor-pointer"
 						onClick={handleEdit}>
-						Edit
+						Editar
 					</p>
 					<p
 						className="font-inter text-sm orange_gradient cursor-pointer"
 						onClick={handleDelete}>
-						Delete
+						Borrar
 					</p>
 				</div>
 			)}

@@ -8,14 +8,14 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 				<span className="blue_gradient">{type} Post</span>
 			</h1>
 			<p className="desc text-left max-w-md">
-				{type} comparte lo que te de la gana aqui
+				Escribe unas palabras para tí o para alguién.
 			</p>
 
 			<form
 				onSubmit={handleSubmit}
 				className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
 				<label>
-					<span className="text-base">Your AI Prompt</span>
+					<span className="text-base">Tus palabras</span>
 
 					<textarea
 						value={post.prompt}
@@ -28,17 +28,14 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 
 				<label>
 					<span className="text-base">
-						Tag{" "}
-						<span className="font-normal">
-							(#product, #webdevelopment, #idea)
-						</span>
+						Tag <span className="font-normal">(#love, #objetivos, #idea)</span>
 					</span>
 
 					<input
 						value={post.tag}
 						onChange={(e) => setPost({ ...post, tag: e.target.value })}
 						type="text"
-						placeholder="#tag"
+						placeholder="tag"
 						required
 						className="form_input"
 					/>
@@ -46,14 +43,14 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 
 				<div className="flex-end mx-3 mb-5 gap-4">
 					<Link href="/" className="text-gray-500">
-						Cancel
+						Cancelar
 					</Link>
 
 					<button
 						type="submit"
 						disabled={submitting}
 						className="px-5 py-1.5 text-sm bg-orange-500 rounded-full text-white">
-						{submitting ? `${type}ing...` : type}
+						{submitting ? `Cargando...` : type}
 					</button>
 				</div>
 			</form>

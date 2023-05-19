@@ -2,7 +2,7 @@ import "@styles/globals.css";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 export const metadata = {
-	title: "twitter",
+	title: "testing",
 	description: "Pon lo que te de la gana",
 };
 

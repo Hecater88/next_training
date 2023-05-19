@@ -37,11 +37,11 @@ const Nav = () => {
 				{session?.user ? (
 					<div className="flex gap-3 md:gap-5">
 						<Link href="/create-prompt" className="black_btn">
-							Create Post
+							Crear post
 						</Link>
 
 						<button type="button" onClick={signOut} className="outline_btn">
-							Sign Out
+							Cerrar sesión
 						</button>
 
 						<Link href="/profile">
@@ -63,7 +63,7 @@ const Nav = () => {
 									key={provider.name}
 									onClick={() => signIn(provider.id)}
 									className="black_btn">
-									Sign In
+									Iniciar sesión
 								</button>
 							))}
 					</>
